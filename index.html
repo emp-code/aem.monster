@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='%23b4783c'%3E%3Cpolygon%20points='0,4%200,20%208,12'/%3E%3Cpolygon%20points='24,4%2024,20%2016,12'/%3E%3Cpolygon%20points='2,4%2012,14%2022,4'/%3E%3Cpolygon%20points='12,16%209,13%202,20%2022,20%2015,13'/%3E%3C/svg%3E">
+		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='%23ac713e'%3E%3Cpolygon%20points='0,4%200,20%208,12'/%3E%3Cpolygon%20points='24,4%2024,20%2016,12'/%3E%3Cpolygon%20points='2,4%2012,14%2022,4'/%3E%3Cpolygon%20points='12,16%209,13%202,20%2022,20%2015,13'/%3E%3C/svg%3E">
 		<link rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html" hreflang="en-US">
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/emp-code/aem-client@76397cb350da23d0b62067d1c96c865cf227f83b/modern/main.css" integrity="sha384-mrQ2opujYD1G3FB+FuKZQ31F4KaEdvLuAWSU3aMuhtf5LlqTmBnDAm+1xyesxN8L" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/emp-code/aem-client@4b192162e3a494a5639fcb1a049d1076f3ca6879/modern/main.css" integrity="sha384-Yd8vc2NAmxssG9xBiA7oz1s36Cz+OrCJ6I39EvOU8Jka4xnLnU9upVjfXHjlGPGh" crossorigin="anonymous">
 
 		<meta name="aem.subtitle" content="Private email service">
 		<meta name="aem.provider" content="aem.monster">
@@ -12,7 +12,8 @@
 		<meta name="author" content="EMPcode">
 		<meta name="color-scheme" content="dark light">
 		<meta name="description" content="Private email service powered by All-Ears Mail">
-		<meta name="theme-color" content="#001">
+		<meta name="theme-color" content="#ac713e" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#140801" media="(prefers-color-scheme: dark)">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>All-Ears Mail</title>
@@ -129,7 +130,7 @@
 						</div>
 
 						<div id="div_write_2" hidden>
-							<p id="write2_ask"><input type="text" pattern="[0-9A-Za-z+/]{51}" size="51" minlength="51" maxlength="51" autocomplete="off" placeholder="Receiver ASK (enables E2EE)"></p>
+							<p id="write2_ask"><input type="text" pattern="[0-9A-Za-z+\/]{51}" size="51" minlength="51" maxlength="51" autocomplete="off" placeholder="Receiver ASK (enables E2EE)"></p>
 							<p id="write2_send"><button type="button"><span id="write2_btntxt">Send to</span> <span id="write2_recv"></span></button></p>
 							<hr>
 							<p id="write2_from"></p>
@@ -260,7 +261,7 @@
 									</tbody>
 									<tfoot>
 										<tr>
-											<td colspan="4"><button id="btn_limits" type="button" autocomplete="off">Update limits</button></td>
+											<td colspan="4"><button id="btn_limits" type="button" autocomplete="off">Set limits</button></td>
 										</tr>
 									</tfoot>
 								</table>
@@ -275,9 +276,9 @@
 
 								<hr>
 
-								<div class="center">
-									<p><button type="button" id="btn_permit" autocomplete="off">Get Registration Permit</button></p>
-									<p><input type="text" id="txt_permit" minlength="50" maxlength="50" readonly="readonly" autocomplete="off"></p>
+								<div class="div_genbtn">
+									<button type="button" id="btn_permit" autocomplete="off">Get Registration Permit</button>
+									<input type="text" id="txt_permit" readonly="readonly" autocomplete="off">
 								</div>
 							</fieldset>
 
@@ -293,9 +294,9 @@
 
 								<hr>
 
-								<div>
+								<div class="div_genbtn">
 									<button id="btn_ask">Generate ASK</button>
-									<output id="txt_ask" class="half">(ASK for <abbr title="End-to-end encrypted">E2EE</abbr> internal mail)</output>
+									<input type="text" id="txt_ask" readonly="readonly" autocomplete="off">
 								</div>
 
 								<hr>
@@ -471,7 +472,7 @@
 		<script src="https://cdn.jsdelivr.net/gh/google/brotli@1.0.7/js/decode.min.js" integrity="sha384-D02d+8Zt5n4/7mnD+GctnXcW7NBcKHdgDsl3msmWdkOG3094pdP0ceN/4c/zChml" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/gh/emp-code/libsodium.js/dist/browsers-sumo/sodium.js" integrity="sha384-rcw2LBMSpnX4HFY+md42L1aJ+phy3xFtydixbQPd9mt9H4F85shsmqvaGg7maGzf" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/gh/emp-code/PV-Client@88c875d477a85a036ede319c83f3d5aa121c54ce/PostVault.js" integrity="sha384-XOI12pifcDnhGDuDP0M8qUnwf4qfBa/sMfm4Y9l9rdn+Uv1BMeq64BahjmTP1JzP" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/gh/emp-code/aem-client@76397cb350da23d0b62067d1c96c865cf227f83b/all-ears.js" integrity="sha384-mahXZNKQWgT/1snaSQIytCcJ0IcYNddDwtHWAukcQG0xwkZxTZgJG69UPPtvzTga" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/gh/emp-code/aem-client@76397cb350da23d0b62067d1c96c865cf227f83b/modern/main.js" integrity="sha384-1CBl5+jIW4S5SuPr02LM4xIquat3/F5dwdfAD8/i+zMhYn4YiMPbAxoGPEIGD6Vt" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/gh/emp-code/aem-client@4b192162e3a494a5639fcb1a049d1076f3ca6879/all-ears.js" integrity="sha384-Q0cI2tIywTjm313l4pRdq1Eb1GFjAKBzbbnrN++7kdGzqkY40yEDzr0njj0b8P5S" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/gh/emp-code/aem-client@4b192162e3a494a5639fcb1a049d1076f3ca6879/modern/main.js" integrity="sha384-y5LqArJ+8j1G3yXQuqKxWIAIoKUNEWJhrzunrrTolcwDg6vYyCcpUdVx9DLJrfbr" crossorigin="anonymous"></script>
 	</body>
 </html>
